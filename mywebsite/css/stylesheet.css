@@ -1,0 +1,135 @@
+@font-face { /* 애플산돌고딕 폰트 적용 */
+  font-family: "GothicA1";
+  src: url("F:\개발\html5\HTML5\myewbsite\font\GothicA1-Medium.ttf") format("truetype");
+  font-weight: 300;
+} 
+@font-face { /* 애플산돌고딕 폰트 적용 */
+  font-family: "GothicA1";
+  src: url("F:\개발\html5\HTML5\myewbsite\font\GothicA1-ExtraBold.ttf") format("truetype");
+  font-weight: 700;
+} 
+*{
+  margin: 0 auto;
+  padding: 0 auto; 
+  
+}
+html{
+  max-width: 1920px;
+  max-height: 1080px;
+}
+
+li{
+  list-style: none;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
+.nav{
+  width: 100%;
+  position: fixed;
+  border-bottom: 0.3px solid rgba(255, 255, 255, 0.1);
+  margin: -1% 0%;
+}
+.logo{
+  margin-top: 2%;
+  margin-left: 2%;
+  width: 10%;
+  float: left;
+  font-family: GothicA1;
+  font-weight: bold;
+  font-size: 1.5em;
+  text-align: center;
+}
+.logo a{
+  color: greenyellow;
+  text-decoration: none;
+  display: block;
+}
+.logo a:hover{
+  color: white;
+  transition-duration: 0.3s;
+ }
+.menu ul{
+  padding-top: 2%;
+  width: 40%;
+  float: right;
+  text-align: center;
+}
+.menu ul li{
+  width: 30%;
+  height: 50px;
+  float: left;
+  font-family: GothicA1;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.menu ul li a{
+  color:  greenyellow;
+  display: block;
+  font-family: "GothicA1";
+}
+.menu ul li a:hover{
+  color: white;
+  transition-duration: 0.3s;
+
+}
+.menu ul li a :nth-child(1):active{
+  display: none;
+}
+/* ---------------------------------- */
+.main{
+  width: 100%;
+  height: 100%;
+  
+}
+.img{
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+.word{
+  padding-top: 15%;
+  text-align: center;
+}
+.wordtext{
+  padding: 3%;
+  width: 30%;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+}
+.wordtext h1{
+  color: greenyellow;
+}
+.me{
+  position:absolute;
+  margin-top: 30%;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  
+}
+.me_main{
+  margin-top: 100px;
+  margin-left: 16%;
+
+}
+.me_product{
+  width: 15%;
+  background-color: antiquewhite;
+  border: solid 1px gray;
+  border-radius: 30px;
+  float: left;
+  margin: 1% 1% 0 0;
+}
+.product_head{
+  height: 50px;
+  border-bottom: 1px solid gray;
+  line-height: 50px;
+
+}
+.product_main{
+  height: 100px;
+  line-height: 100px;
+}
