@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* 사용자에게 년, 월을 입력으로 받아 입력 받은 월의 마지막 일자를 반환하는 코드를 작성하세요.
+       단, switch문으로 작성하세요.
+    
+    */
+    var monthLastDay;
+    var yearNmonth = prompt('년, 월을 입력하세요.','2023 7');
+    yearNmonth = yearNmonth.split('');
+    yearNmonth[0] = Number(yearNmonth[0]);
+    yearNmonth[1] = Number(yearNmonth[1]);
+
+    switch(yearNmonth[1]){
+      case 4: case 6: case 9: case 11: 
+      monthLastDay = 30;
+      break;
+
+      case 2:
+        switch(true){
+          case yearNmonth[0] % 4 == 0 && yearNmonth[0] % 100 ==!0 || yearNmonth[0] % 400 == 0 :
+            monthLastDay = 29;
+            break;
+          default:
+            monthLastDay = 28;
+            break;
+        }
+        break;
+      default:monthLastDay = 31;
+        
+    }
+    alert('입력하신 '+yearNmonth[0]+'년' +yearNmonth[1]+ '월의 마지막 일자는 ' +monthLastDay+'일 입니다.');
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* 사용자에게 년도를 입력으로 받아 윤년 여부를 판단하여 출력하는 코드를 작성하세요. 
+      [ 코드 작성 유형 ]
+      1. if ... else if ... else 구문을 사용하여 문제를 해결하세요.
+      2. if ... else 구문을 이용하여 문제를 해결하세요.
+    
+    */
+    var year = prompt(' 년도를 입력해주세요:', 2023);
+    year = Number(year);
+    // if(year != 0){
+    //   if(year % 400 == 0){
+    //   var result = '윤년'
+    //   }else if( year % 100 == 0 ){
+    //     var result = '평년'
+    //   }else if( year % 4 == 0){
+    //     var result = '윤년'
+    //   }else{
+    //     var result = '평년'
+    //   }
+    //   alert('입력하신 연도 : '+year+', ' +result + '입니다.');
+    //   // 자바스크립트는 Block scoap을 지원하지 않기 때문에 구문 바깥에서 사용된다.
+    // } else{
+    //   alert('올바른 연도를 입력하세요.')
+    // }
+    if (year % 4 == 0 && year % 100 ==!0 || year % 400 == 0 ){
+      var result = '윤년'
+    }else{
+      var result = '평년'
+    }
+
+    alert('입력하신 연도 : '+year+', ' +result + '입니다.');
+    
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
