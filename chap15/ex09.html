@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <!-- 레이블이 있는 수평 구구단을 생성하여 출력하는 코드를 작성하세요 -->
+  
+  <script>
+  var gugu = '';
+   for( var i = 0; i <=9; i++){
+    gugu += '<tr>';
+          for(var j=2; j<=9; j++){
+            if(i==0){
+              gugu += '<th>'+j+'단</th>';
+
+            }else{
+              gugu += '<td>'+i+' * '+j+' = '+(j*i)+'</td>';
+            }
+          }
+          gugu += '</tr>'
+      }
+  </script>
+  <style>
+    *{
+      text-align: center;
+    }
+    table, td, th{
+      margin: 0 auto;
+      padding: 10px;
+      border:  1px solid black;
+      text-align: center;
+      border-collapse: collapse;
+    }
+    tr{
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <h1>구구단</h1>
+
+  <table>
+    <script>
+      document.write
+    </script>
+  </table>
+</body>
+</html>
