@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /* 
+    이길 때 까지 가위 바위 보 게임을 진행하는 코드를 작성하세요.
+    */
+    var intro = '[가위바위보 게임]\n\n'+
+                '가위바위보를 선택하세요 \n'+
+                '1. 가위 \n' +
+                '2. 바위 \n' +
+                '3. 보 \n';
+    var kbb =['가위', '바위', '보'];
+    var iswin = false;
+    var user, com, result, msg;
+
+    do{
+        user = prompt(intro, 1)-1;
+        com = parseInt(Math.random()*3);
+
+        switch(user - com){
+            case 0: result = '비겼습니다.'; break;
+            case 1: case-2: result = '이겼습니다.'; iswin = true; break;
+            default : result ='졌습니다.'; break;
+        }
+        msg = '사용자' + kbb[user] + ', 컴퓨터:' + kbb[com] + '\n' +
+              '결과: ' + result;
+
+        alert(msg);
+
+    } while(!iswin);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

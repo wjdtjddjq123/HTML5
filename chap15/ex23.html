@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /* 
+    이길 때 까지 가위 바위 보 게임을 진행하는 코드를 작성하세요.
+    */
+    var UeserGGB = prompt('1.가위 2.바위 3.보 입력하세요.', 1);
+    var ComGBB = parseInt(Math.random()*3)+1;
+    var boolean = false;
+    
+    UeserGGB = Number(UeserGGB);
+    
+    do{
+        var result;
+        switch(UeserGGB){
+            case 0: UeserGGB ='가위'; break;
+            case 1: UeserGGB ='바위'; break;
+            case 2: UeserGGB ='보'; break;
+        }
+        switch(ComGBB){
+            case 0: UeserGGB ='가위'; break;
+            case 1: UeserGGB ='바위'; break;
+            case 2: UeserGGB ='보'; break;
+        }
+        switch(UeserGGB - ComGBB ){
+            case 0: result = '비겼습니다.'; break;
+            case 1: case -2: result = '이겼습니다.'; break; boolean = true;
+            default : result = '졌습니다.'; break;
+        }
+        alert('사용자:' +UeserGGB+'컴퓨터:' + ComGBB + '가위바위보 결과:' + result);
+    }while(!boolean)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

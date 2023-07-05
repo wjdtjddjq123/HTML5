@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    /* 
+        1부터 100 사이의 값 중 3의 배수들의 합을 구하여 출력하는 코드를 작성하세요.
+        단 while 반복문에서 continue를 사용합니다.
+    */ 
+        var i = 1;
+        var num = 0;
+        
+        while(i <= 100){
+            if ( i % 3 != 0){
+                i++;
+                continue;
+            }
+            num += i;
+            i++;
+            
+        }
+        alert('1부터'+i+'까지의 합이'+num+'입니다.');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
