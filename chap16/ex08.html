@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /* 두 개의 숫자, 문자열 ,논리 값을 입력으로 받아 더 큰 값을 반환하는 max함수를 만들고 확인하는 코드를 작성하세요 */
+
+    // var User = prompt('두 개의 숫자, 문자열, 논리 값을 입력해주세요', '10, 20, "kkk", true ');
+    // var Max
+    // for(var i in User){
+    //   if( (User[i]) ==='Number '){
+    //      Max = User[i] > User[i];
+    //   }else if(( typeof User[i]) === 'String'){
+    //      Max += User[i] > User[i];
+    //   }else if(( typeof User[i]) === 'boolean'){
+    //     MAx += User[i] > User[i]
+    //   }
+    //   alert(Max);
+    // }
+
+    function max(vall, val2){
+      var result;
+      if (((typeof vall) === 'number' || (typeof vall) === 'boolean'|| (typeof vall) ==='String') 
+      && (((typeof vall)=== (typeof val2)))){
+        result = vall >= val2 ? vall :val2 ;
+
+      }else{
+        result =  -1;
+      }
+      return result;
+    }
+    alert(max(15,20));
+
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
