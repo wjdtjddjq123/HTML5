@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+/* 
+  [문제1]
+  사용자에게 날짜를 입력받아 해당 날짜의 요일을 반환하는 코드를 작성하세요. 
+  단 함수 기반으로 코드를 작성합니다.
+*/
+  var UserDay = prompt('해당 하는 날짜의 요일을 확인하시려면 입력하세요'
+                      +'\n'+
+                      ' 예) 2023 7 6 '
+  )
+
+  var Year, Mouth, Day, Weedkends;
+  MouthLast = [-1 , 31, 28, 31, 30, 31 , 30, 31 ,31 , 30, 31 , 30, 31]
+  UserDay = UserDay.slice(' ');
+  
+  for(var i in UserDay){
+    UserDay[i] = Number(UserDay[i]);
+  }
+
+  function UserYear (year){
+    var result;
+    for(var i = 1; i < UserDay[0]; i++){
+      if ( i % 4 == 0 && i % 100 != 0 || i % 400 == 0){
+        result += 366;
+      }else{
+        result += 365;
+      }
+      return result;
+  }
+}
+
+  function UserMonth (month){
+    var result;
+    if(UserDay[0] % 4 == 0 && UserDay[0] % 100 != 0 || UserDay[0] % 400 == 0){
+      result = MouthLast[2] = 29;
+    }
+    for( var i = 1; i < UserDay[1]; i++){
+      result = Mouth += UserDay[i];
+    }
+    return result;
+}
+  function UserDays (day){
+    var result;
+    result += UserDay[2];
+    return result;
+  }
+
+  function UserWeek(Weedkends){
+    var result;
+    var week = ['일', '월', '화', '수', '목', '금', '토']
+
+    return result = week[( month + Year + Days ) & 7]    
+  }
+alert(Useryear()+'    '+UserMonth+'    '+UserDays+'   '+ UserWeek) ; 
+//   function msg (msg){
+//     var result;
+
+//     result = alert('입력하신'+ Year+'년'+month+'월'+Days+'일은'+
+//     Weedkends +'요일 입니다.')
+
+//     return result;
+//   }
+  
+//   msg();
+
+  </script>
+</head>
+<body>
+  <h1></h1>
+  <hr/>
+</body>
+</html>
