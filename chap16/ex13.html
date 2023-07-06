@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // let 함수를 사용하면 Black 스콥을 지원,
+    // 
+   let num1 = 10;
+   function func(){
+    let num2 = 20;
+
+    if(true){
+      let num3 = 30;
+      alert('num3:'+num3);  // 1 num : 30 => block scope in function
+      // num3 는 Block 스콥을 갖는 지역변수 
+    }
+    alert('num2:'+ num2);   // 2. num2 : 20 => local variable
+    // alert('num3:'+ num3);   // 3. Error( is not defined )
+     }
+   func();
+   if(true){
+    let num4 = 40;
+    alert('num4:'+ num4);   // 3. num4 : 40 => block scope in global
+   }
+   alert('num1:'+num1);     // 4. num1 : 10 => gloval variable
+  //   alert('num4:'+num4);     // 5. Error( is not defined )
+  //   let 함수를 사용하게 되면 block 스콥을 지원하기 때문에 If 함수 바깥에서 사용하게되면
+  //   오류가 발생하게 된다.
+  //   Block scope 까지 지원하는 함수를만들 때는 var가아닌 Let 함수를 사용해서 만들어야한다.
+  </script>
+</head>
+<body>
+  
+</body>
+</html>

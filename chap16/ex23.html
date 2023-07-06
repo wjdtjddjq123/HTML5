@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+  /*
+  [문제2]
+  1부터 45 사이의 중복되지않는 로또 번호 6개를 생성하여 순서대로 정렬한 후 출력하는 코드를 작성하세요.
+  단, 함수 기반으로 코드를 작성합니다.
+
+  */
+    function lotto(lotto){
+      var result; 
+      var lotto = new Array(6);
+      for(var i in lotto){
+        lotto += parseInt(Math.random()*45)+1;
+
+      }
+      return result;
+    }
+
+
+    alert(lotto(lotto ));
+  </script>
+</head>
+<body>
+  <h1></h1>
+  <hr/>
+</body>
+</html>
