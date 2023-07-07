@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 암시적 객체생성 방법
+        var name = '손흥민';
+        var person = {
+            name : "soengeop",
+            age : 26,
+            gender : "male",
+            eat : function(){
+                alert(this.name + '밥 먹어')
+                // 객체 안에서 객체를 사용하려면 this 내장 함수를 사용해야한다.
+                // 함수를 값으로 가지는 속성 : 메서드
+            }
+        };
+        person.eat();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
