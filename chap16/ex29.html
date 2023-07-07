@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // body 태그의 내용으로 날짜와 시간 값을 계속해서 출력하는 코드를 작성하세요.
+    // var time = new Date().toLocaleString();
+    window.onload = function(){
+
+      var content = document.body.innerHTML;
+
+      var intervalID = setInterval(function(){
+        
+        document.body.innerHTML += content + '<h4>'+ ( new Date().toLocaleString())+'</h4>';
+        // innerHTML : 요소와 요소 사이의 컨텐츠를 읽고 저장할 수 있게 해주는 내장함수
+      }, 1000);
+
+      setTimeout(function() {
+        clearInterval(intervalID);
+      }, 10000);
+    }
+
+  </script>
+</head>
+<body>
+  <h1> 현재 날짜와 시간 </h1>
+  <hr/>
+
+</body>
+</html>
