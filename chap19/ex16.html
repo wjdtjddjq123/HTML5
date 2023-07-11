@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script> 
+
+  function init(){
+    var target = document.getElementById('target');
+    var content ='';
+
+    content += 'location.protocol:' +  location.protocol + '<br/>';
+    content += 'location.host:' +  location.host + '<br/>';
+    content += 'location.hostName:' +  location.hostname + '<br/>';
+    content += 'location.port:' +  location.port + '<br/>';
+    content += 'location.hash:' +  location.hash + '<br/>';
+    content += 'location.search:' +  location.search + '<br/>';
+
+    target.innerHTML += content;
+  }
+    window.onload = init;
+   </script>
+</head>
+<body>
+  <h1> location Example </h1>
+  <hr/>
+
+  <div id="target">
+    <h4>loaction property</h4>
+  </div>
+</body>
+</html>

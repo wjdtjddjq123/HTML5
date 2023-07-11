@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function handler(){
+      alert('버튼을 클릭했습니다.');
+    }
+
+    function init(){
+     var btn = document.getElementById('btn');
+    //  alert(btn.innerHTML);
+    //  id가 btn인 html의 객체
+
+      btn.onclick = handler;
+
+    }
+    window.onload = init;
+// 웹 페이지의 파싱이 전부 다 끝났을 때 init 함수가 작동한다.
+  </script>
+</head>
+<body>
+  <h1> Event Example 1</h1>
+
+  <hr/>
+  <button id="btn"> Click </button>
+</body>
+</html>

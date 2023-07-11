@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script> 
+
+    function back_handler(){
+      history.back;
+    }
+
+    function forward_handler(){
+      history.forward;
+    }
+
+    function init(){
+      var length = document.getElementById('length');
+      length.innerHTML ='lentgh:' + history.length;
+
+      var back = document.getElementById('back');
+      back.onclick = back_handler;
+
+      var forward = document.getElementById('forward');
+      forward.onclick = forward_handler;
+    }
+
+    window.onload = init;
+   </script>
+</head>
+<body>
+  <h1> history Example 1</h1>
+
+  <hr/>
+  <h4 id="length">length</h4>
+  <button id="back">&lt;&lt;&lt;</button>
+  <button id="forward">&gt;&gt;&gt;</button>
+  <input type="number" min="-99" max="99"  step="1" value="0" id="goNum">
+  <button id="goBtn">Go!</button>
+</body>
+</html>

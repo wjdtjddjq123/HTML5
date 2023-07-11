@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var total = 0;
+    '1 2 3 4 5'.split(' ').forEach(function(value, idx){
+       // forEach 는 매개변수로 Function을 받음 수 있다.
+       // 공백을 구분자로 
+       // split의 결과는 배열 
+       // forEach매서드는 For in과 같은 역할을 해주지만, 연결된 문장으로도 사용할 수 있다.
+       value = String(value);
+       total += value;
+      //  문자 값 value 숫자형 변환 후 total에 다 저장
+    }); 
+    alert('total:' + total);
+
+  </script>
+</head>
+<body>
+  <h1> 메서드 체이닝</h1>
+  <hr/>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 암시적 객체 생성
+
+        function getPerson(name, age, gender){
+            var person = {
+            name : name ,
+            age : age ,
+            gender : gender
+        // 매개변수로 받아서 
+        // person객체 반환
+            };
+            return person;
+        }
+        var person1 = getPerson('손흥민', 31, 'male');
+        var person2 = getPerson('김여녕', 34, 'female');
+
+        alert(person1.name+ ','+person1.age+','+person1.gender);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
