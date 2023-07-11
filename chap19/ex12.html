@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function Click_handler(){
+     var target = document.getElementById('target')
+     target.innerHTML = '버튼을 클릭했습니다.'
+    }
+    
+    function Clear_handler(){
+      var target = document.getElementById('target')
+      target.innerHTML = "";
+    }
+
+    function init(){
+     var btn = document.getElementById('btn_Click');
+     var clear = document.getElementById('btn_Clear');
+      btn.onclick = Click_handler;
+      clear.onclick = Clear_handler;
+
+    }
+    window.onload = init;
+
+  </script>
+  <style>
+    #target{
+      margin-top: 30px;
+      width: 300px;
+      border: solid 1px black;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1> Event Example 1</h1>
+
+  <hr/>
+  <button id="btn_Click"> Click </button>
+  <button id="btn_Clear"> Clear </button>
+  <div id="target"> </div>
+</body>
+</html>

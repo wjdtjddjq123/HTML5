@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        학생 성적 관리 프로그램 
+        5명의 학생들의 성적 정보를 입력받아 1등인 학생의 한번, 이름, 국어, 영어, 수학 ,과학 시험점수와
+        
+        총점, 평군을 출력하는 코드를 작성하세요.
+        단, 객체 지향적으로 코드를 작성합니다.
+
+        
+        */
+        var student = prompt('학생의 정보를 입력해주세요', '학번 이름 국어성적 영어성적 수학성적 과학성적');
+
+        for(var i = 0; i <= 5; i++){
+            var students = new Array();
+            students += student;    
+        }
+
+        var studentInfo = {
+            StudnetNumber: Number(student.split(' ')[0]),
+            StudnetName: String(student.split(' ')[1]),
+            StudnetKScore: Number(student.split(' ')[2]),
+            StudnetEScore: Number(student.split(' ')[3]),
+            StudnetMScore: Number(student.split(' ')[4]),
+            StudnetSScore: Number(student.split(' ')[5]),
+
+            totalScore (){
+                this.StudnetEScore + this.StudnetKScore + this.StudnetMScore + this.StudnetSScore;
+            },
+
+            AvregeScore(){
+                this.totalScore % 4 ;
+            },
+        }
+
+        alert(students)
+
+
+       
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
