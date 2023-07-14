@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function rotateHendler (){
+      var image = document.querySelector('image');
+      
+    }
+    function stopHendler(){
+
+    }
+    function init(){
+      var ratate = document.querySelector('rotate').onclick = rotateHendler;
+      var stop = document.querySelector('stop').onclick = stopHendler;
+    }
+
+    window.onload = init
+  </script>
+  <style>
+    #image{
+      margin-top: 80px;
+      width: 100%;
+      height: 30px;
+      position: absolute;
+    }
+    #image img{
+      width: 10%;
+      float: left;
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <h1>rotate image</h1>
+  <button id="rotate">회전</button>
+  <button id="stop">중지</button>
+  <div id="image">
+    <img src="image/Chrysanthemum.jpg">
+    <img src="image/Desert.jpg">
+    <img src="image/Hydrangeas.jpg">
+    <img src="image/Jellyfish.jpg">
+    <img src="image/Koala.jpg">
+    <img src="image/Lighthouse.jpg">
+    <img src="image/Penguins.jpg">
+    <img src="image/Tulips.jpg">
+  </div>
+</body>
+</html>

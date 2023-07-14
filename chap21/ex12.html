@@ -7,7 +7,10 @@
   <title>Document</title>
   <script>
     function init(){
-
+      var img = document.createElement('img');
+      img.setAttribute('src', 'image/penguins.jpg') ;
+      img.setAttribute( 'width', '500');
+      document.body.appendChild(img);
     }
     window.onload = init;
   </script>

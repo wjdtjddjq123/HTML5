@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/parameter.js">
+    /*
+      login.html으로 부터 보내온 로그인 요청에 포함된 
+      파라미터를 읽어 미리 약속된 ID,PWSSWD 값과 비교하여 
+      일치하면 환영 메시지를 출력하고, 일치하지 않는경우
+      메시지와 함께 다시 로그인 페이지로 되돌리는 코드를 작성하세요.
+
+    */
+    var Parameters = getParameters(location.search);
+
+    function loginproc(){
+      const ID ='seongeop';
+      const PASSWD ='1234';
+      var result = false;
+      
+
+      if( Parameters.getParamValue('id') === ID && Parameters.getParamValue('passwd')=== PASSWD){
+        result = true;
+      }
+      return result;
+    }
+    function init (){
+
+      if(loginproc()){
+        document.body.innerHTML += '<h4>'+ Parameters.getParamValue('id') +'님 환영합니다 </h4>';
+      }else{
+        alert('로그인 실패했습니다. \n 다시 시도해주세요.');
+        location.href('login.html');
+      }
+    }
+
+
+    window.onload = init;
+  </script>
+
+</head>
+<body>
+  <h1>로그인 성공!</h1>
+  <hr>
+</body>
+</html>
