@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var img;
+
+    function sethandler(){
+      img.setAttribute('data-origin','사용자 속성 값')
+    }
+    function gethandler(){
+      img.getAttribute('data-origin')
+    }
+    function removehandler(){
+      img.removeAttribute('data-origin')
+    }
+    function init(){
+      img =document.querySelector('img');
+      document.querySelector('#set').onclick = sethandler;
+      document.querySelector('#get').onclick = gethandler;
+      document.querySelector('#remove').onclick = removehandler;
+
+    }
+    window.onload = init;
+  </script>
+</head>
+<body>
+  <h1>Atrribute Example</h1>
+  
+  <img src="image/Penguins.jpg" width="500">
+  <hr/>
+  <button id="set">set</button>
+  <button id="get">get</button>
+  <button id="remove">remove</button>
+</body>
+</html>

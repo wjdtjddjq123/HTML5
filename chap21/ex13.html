@@ -7,7 +7,11 @@
   <title>Document</title>
   <script>
     function init(){
-
+      var img = document.createElement('img');
+      img.setAttribute('src', 'image/penguins.jpg') ;
+      img.setAttribute( 'width', '500');
+      img.setAttribute( 'data-origin', '사용자속성');
+      document.body.appendChild(img);
     }
     window.onload = init;
   </script>

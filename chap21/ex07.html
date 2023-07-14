@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function handler(){
+      var data = document.querySelector('#data');
+      var target = document.querySelector('#target');
+      var userdata = new Date(data.value);
+      var dayOfweek = ['일','월','화','수','목','금','토'];
+      target.innerHTML = '결과:' + data.value +'날짜의 요일은 ' +  (dayOfweek[userdata.getDay()]+ '요일 입니다.');
+
+      data.value = '2023-07-13'
+    }
+
+    function init(){
+      var btn = document.querySelector('#btn').onclick = handler;
+    }
+
+    window.onload = init;
+  </script>
+</head>
+<body>
+  <h1>요일 계산 프로그램</h1>
+  <label for="data" >날짜 선택</label>
+  <input type="data" id="data" value="2023-07-13">
+  <button id="btn">계산</button>
+
+  <hr/>
+  <h4 id="target">결과 : </h4>
+</body>
+</html>
