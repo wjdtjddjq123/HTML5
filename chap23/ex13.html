@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+    사용자에게 언제나 자연수를 입력으로 받을 수 있는 코드를 작성하세요.
+    */
+    function getUserInput() {
+    while (true) {
+    var input = prompt("자연수를 입력해주세요:");
+    var number = parseInt(input);
+
+      if (isNaN(number) || number <= 0) {
+        alert("유효한 자연수를 입력해주세요.");
+      } else {
+       return number;
+      }
+  }
+}
+
+var userInput = getUserInput();
+alert("입력한 자연수: " + userInput);
+  </script>
+</head>
+<body>
+  <h1></h1>
+  <hr/>
+</body>
+</html>

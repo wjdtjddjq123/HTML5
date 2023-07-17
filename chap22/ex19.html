@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    function handelr(event){
+        var content = event.target.innerHTML;
+
+    }
+    function init() {
+        document.querySelector('#list').addEventListener('click', handler);
+    }
+    window.onload = init;
+  </script>
+</head>
+<body>
+  <h1>할 일 목록</h1>
+  <hr/>
+  <ul id="list" style="list-style-type:square;">
+    <li type="chcek">할 일 1</li>
+    <li type="chcek">할 일 2</li>
+    <li type="chcek">할 일 3</li>
+    <li type="chcek">할 일 4</li>
+    <li type="chcek">할 일 5</li>
+  </ul>
+  
+</body>
+</html>
