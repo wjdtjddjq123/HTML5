@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    /*
+    사용자에게 언제나 자연수를 입력으로 받을 수 있는 코드를 작성하세요.
+    */
+   /* 
+
+   var arr = ['hello', '', null, 'false', '3.14', '-5', '3'];
+   for (var i in arr){
+    alert(arr[i]+' : '+Number(arr[i]));
+   }
+
+   */
+  function getNautralNumber(num){
+
+    num = Number(num);
+
+    if(isNaN(num) || num <= 0 ){
+      throw new Error('자연수가 아닙니다.');
+    }
+    return num;
+  }
+
+  while(true){
+    num = prompt('하나의 자연수를 입력하세요.',1);
+
+    try{
+      num = getNautralNumber(num);
+      alert('자연수를 입력했습니다.');
+      break;
+    }
+    catch(e){
+      alert(e.message);
+    }
+  }
+  </script>
+</head>
+<body>
+  <h1></h1>
+  <hr/>
+</body>
+</html>
