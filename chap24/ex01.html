@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var personCSV = '손흥민,남자,31,축구\n';
+    personCSV += '김연아,여자,26,피겨\n';
+    personCSV += '류현진,남자,38,야구';
+
+    function ParsePersonCSV(csv){    
+        var persons = csv.split('\n');
+        
+        for(var i in persons){
+            var content = '';
+           persons[i] = persons[i].split(',');
+           for(var j in persons[i]){
+            persons[i][j].trim();
+           }
+           content += '<h4> 이름:'  + persons[i][0] +'</h4>';
+           content += '<h4> 성별:'  + persons[i][1] +'</h4>';
+           content += '<h4> 나이:'  + persons[i][2] +'</h4>';
+           content += '<h4> 분야:'  + persons[i][3] +'</h4>';
+
+           var div = document.createElement('div');
+
+           div.setAttribute('class', 'person');
+           div.innerHTML = content;
+
+           persons[i] = div;
+        //    persons객체 div 배열로 변환
+        }
+        return persons;
+    }   
+    ParsePersonCSV(personCSV);
+    function init(){
+        var personsChild = ParsePersonCSV(personCSV);
+        // 각 인물별 정보
+        var person = document.querySelector('#persons');
+        
+        for (var i in personsChild){
+           var p =  person.appendChild(personsChild[i]);
+        }
+        person.innerHTML += p
+
+    }
+    window.addEventListener('load', init);
+  </script>
+  <style>
+    .person{
+        width: 200px;
+        border:  2px solid black;
+        height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1> 인물정보 </h1>
+  <hr/>
+  <div id="persons">
+    <div class="person">
+
+    </div>
+  </div>
+</body>
+</html>
