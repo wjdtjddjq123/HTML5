@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+
+    var person = {
+      name : '손흥민'
+      ,gender : '남자'
+      ,age : 31
+      ,field : '축구'
+    }
+    function init(){
+      var JsonStr = document.querySelector('#JsonStr');
+      var jsonObj = document.querySelector('#jsonObj')
+
+      var jsonData = JSON.stringify();
+      JsonStr.innerHTML = jsonData;
+      
+      var jsonperson = JSON.parse(jsonData);
+      var content = '';
+
+      for(var key in jsonperson){
+        if(typeof (jsonperson[key]) !== 'object'){
+          content += key +' : '+ jsonperson[key] + '<br/>';
+        }
+
+      }
+      jsonObj.innerHTML  =content;
+    }
+
+
+    window.onload = init;
+  </script>
+</head>
+<body>
+  <h1>JSON 예제</h1>
+  <hr/>
+  <p id ="JsonStr"></p>
+  <p id ="jsonObj"></p>
+</body>
+</html>
