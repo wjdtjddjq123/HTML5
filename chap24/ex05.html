@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var xhr = new XMLHttpRequest();
+    
+    
+    // get방식으로 csv요청 동기 방식으로 동작 True -> 동기 방식 
+    // 하나의 작업이 여러 단계별로 나뉘어져있는데 비동기 방식으로는 AJAX 순서를 제어하는 것이 불가능해짐
+    // 
+    function sendCsvHandler(){
+      var target = document.querySelector('#target');
+      xhr.open('GET', 'persons.csv', false);
+      xhr.send();
+
+      target.innerHTML = xhr.responseText;
+    }
+
+    function sendJsonHandler(){
+      var target = document.querySelector('#target');
+      xhr.open('GET', 'persons.json', false);
+      xhr.send();
+
+      target.innerHTML = xhr.responseText;
+    }
+    function init(){
+      document.querySelector('#sendCSV').addEventListener('click', sendCsvHandler)
+      document.querySelector('#sendJSON').addEventListener('click', sendJsonHandler)
+    }
+    window.onload = init;
+  </script>
+
+  <style>
+    #target{
+      width: 500px;
+      height: 200px;
+      border:  2px solid black;
+      padding: 20px;
+      margin: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>AJAX Example1</h1>
+  <hr/>
+  <button id="sendCSV">AJAX CSV</button>
+  <button id="sendJSON">AJAX JSON</button>
+  <div id="target">
+
+  </div>
+
+</body>
+</html>
