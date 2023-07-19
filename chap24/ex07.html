@@ -7,6 +7,12 @@
     <script>   
     var xhr = new XMLHttpRequest(); 
 
+// 생성자 함수로부터 xhr저장
+    function parsePersonsJSON(jsonStr) {
+        var persons = JSON.parse(jsonStr);
+        // jsonstr의 매개변수로 제공된 persons.json은 parse 메서드로 자바스크립트 객체가 됨
+
+
     function parsePersonsJSON(jsonStr) {
         var persons = JSON.parse(jsonStr);
 
@@ -17,10 +23,19 @@
             content += '<h4>분야: ' + persons[i].field + '</h4>';
 
             var div = document.createElement('div');
+            // div 테그 생성
+            div.setAttribute('class', 'person');
+            // div 태그에 class=person 생성 
+            div.innerHTML = content;
+            // 자식요소로 content 추가
+            persons[i] = div;
+            // person div 객체로 변환
+
             div.setAttribute('class', 'person');
             div.innerHTML = content;
 
             persons[i] = div;
+
         }
 
         return persons;
@@ -28,6 +43,20 @@
 
     function sendHandler() {
         xhr.open('GET', 'persons.json', false);
+
+        //  xhr객체를 이용해서 open 함수호춯로 준비, Get 방식 / 동기방식으로 json 파일 요청
+        xhr.send();
+        // send 호출 서버로 부터 메서드가 종료되어야 종료
+        var personsChild = parsePersonsJSON(xhr.responseText);
+        // xhr객체의 서버의 persons.json 요청, parsePersonJSON 함수에 매개변수로 넣어줌
+       
+        var persons = document.querySelector('#persons');
+
+        persons.innerHTML = '';
+        // person 초기화, 초기화지 않으면 계속해서 똑같은 인물자료가 누적되어서 생성됨+
+        for(var i in personsChild) {
+            // div 요소객체
+
         xhr.send();
         
         var personsChild = parsePersonsJSON(xhr.responseText);
@@ -35,6 +64,7 @@
         persons.innerHTML = '';
 
         for(var i in personsChild) {
+
             persons.appendChild(personsChild[i]);
         }
     }
